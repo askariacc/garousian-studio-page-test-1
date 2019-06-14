@@ -1,0 +1,42 @@
+//land-blue
+$land-blur: rgba(34, 57, 155, 0.8);
+
+// buttons
+$btn-land-blue: #5274F9;
+
+$btn-blue-bg: #EDF1FF;
+$btn-blue-text: #5C3FFB;
+
+$btn-green-bg: #E9F9F0;
+$btn-green-text: #32BA6E;
+
+$btn-orange-bg:#FEF2EB;
+$btn-orange-text: #FB7C3F;
+
+// section-video
+$section-video-bg: #606060;
+
+//section-customer
+$cutomer-bg: rgba(242, 242, 242, 0.93);
+
+// footer
+$footer-blur: rgba(51, 51, 51, 0.8);
+$footer-bg: #333333;
+
+//media's Sizes
+$break-sm: 768px;
+$break-md: 992px;
+
+//box's shadow
+@mixin post-box-shadow {
+    box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.1);
+}
+@mixin post-box-shadow-md {
+    box-shadow: 0 3px 46px 0 rgba(0, 0, 0, 0.1);
+}
+@mixin customer-box-shadow {
+    box-shadow: 0 13px 23px 0 rgba(0, 0, 0, 0.05);
+}
+@mixin customer-box-shadow-md {
+    box-shadow: 0 3px 33px 0 rgba(0, 0, 0, 0.07);
+}
