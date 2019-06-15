@@ -197,21 +197,8 @@ img {
 // END: Service's description
 
 // START: Cards
-.cards-container{
-  padding: 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  @media(min-width: $break-md){
-    justify-content: center;
-  }
-}
 .card{
   margin-bottom: 174px;
-  @media(min-width: $break-sm){
-      margin-left: 10px;
-  }
-  
   &__image{
     position: relative;
   }
@@ -258,6 +245,7 @@ img {
       width: 114px;
       text-align: center;
       padding: 4px 0 1px;
+      margin-left: 10px;
       &--blue{
         background: $tag-blue-bg;
         color: $tag-blue-text;
@@ -276,6 +264,16 @@ img {
 // END: Cards
 
 // START: config columns
+.cards-container{
+  max-width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  @media(min-width: $break-md){
+    justify-content: center;
+  }
+}
 .col-{
   &12{
     flex:  1 1 100%;
@@ -283,8 +281,9 @@ img {
   }
   &sm-6{
     @media(min-width:$break-sm){
-      flex:  1 1 50%;
-      max-width: 50%;
+      flex:  1 1 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+      margin-left: 10px;
       &:last-of-type{
         margin: 0 auto;
       }
@@ -298,7 +297,11 @@ img {
   &md-4{
     @media(min-width:$break-md){
       flex:  1 1 33.3333333%;
-      max-width: 371px;
+      max-width: 414px;
+      margin-left: 30px;
+      &:last-of-type{
+        margin-left: 0;
+      }
     }
   }
 }
