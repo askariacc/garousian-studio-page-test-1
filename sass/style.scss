@@ -134,6 +134,10 @@ img {
       padding: 88px 5%;
     }
   }
+  &--f2 {
+    background: #f2f2f2;
+    padding-bottom: 50px;
+  }
 }
 .logo {
   margin: 0 auto;
@@ -271,6 +275,9 @@ img {
     text-align: center;
     position: absolute;
     @include post-box-shadow;
+    @media(min-width: $break-sm){
+      @include post-box-shadow-md;
+    }
     z-index: 9999;
     bottom: -145px;
     right: 0;
@@ -369,3 +376,114 @@ img {
   }
 }
 // END: intro video
+// START: user review
+.user{
+  padding: 40px 21px;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background: #ffffff;
+  margin-bottom: 30px;
+  @include customer-box-shadow;
+  @media(min-width: $break-sm){
+    margin-bottom: 0;
+  }
+  @media(min-width: $break-md){
+    flex-direction: row;
+    align-items: end;
+    padding: 68px 50px;
+  }
+  &-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 16px;
+    @media(min-width: $break-sm){
+      max-width: 1064px;
+      margin: 0 auto;
+      .col-sm-6 {margin-left: 0}
+      .col-12:nth-of-type(1) .user{
+        margin-left: 20px;
+      }
+      .col-12:nth-of-type(2) .user{
+        margin-right: 20px;
+      }
+    }
+  }
+  &__pic{
+    width: 82px;
+    height: 82px;
+    margin-bottom: 40px;
+    @media(min-width: $break-md){
+      width: 90%;
+      margin: 0;
+      margin-left: 40px;
+    }
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    @media(min-width: $break-md){
+      align-items: baseline;
+    }
+  }
+  &__comment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(min-width: $break-md){
+      align-items: flex-start;
+      flex-direction: column-reverse;
+    }
+    p{
+      text-align: center;
+      font-size: 16px;
+      font-weight: 300;
+      color: #808080;
+      @media(min-width: $break-md){
+        text-align: right;
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 29px;
+        color: #404040;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__name{
+    font-size: 20px;
+    font-weight: 500;
+    color: #404040;
+    margin-bottom: 8px;
+    
+  }
+  &__title{
+    font-size: 16px;
+    font-weight: 500;
+    color: #808080;
+    margin-bottom: 30px;
+    @media(min-width: $break-md){
+      font-size: 15px;
+      font-weight: 300;
+      color: #404040;
+      margin-bottom: 0;
+    }
+  }
+}
+// END: user review
+
+// START: icons
+.icons {
+  display: flex;
+  max-width: 600px;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 10px auto 0;
+  img {
+    width: 30px;
+    height: 40px;
+  }
+}
+// END: icons
